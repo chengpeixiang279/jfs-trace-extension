@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "JFS 请求抓包器",
+  "version": "1.0.0",
+  "description": "在 JFS 系统自动拦截 XHR/fetch，记录请求/响应体，一键导出 JSON 用于排查报错。",
+  "content_scripts": [
+    {
+      "matches": ["https://jfs.jtcargo.com.br/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
